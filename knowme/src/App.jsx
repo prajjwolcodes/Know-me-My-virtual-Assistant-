@@ -1,10 +1,11 @@
+import { useEffect } from "react";
 import "./App.css"
-import Navbar from "./components/Navbar"
 import Component from "./pages/ChatJPT"
-import ChatInterface from './helpers/KnowMe'
-import Reply from "./helpers/Reply"
 
 const App = () => {
+   useEffect(() => {
+    document.title = 'Chat-JPT';
+  }, []);
   return (
     <div className="">
       {/* <Navbar /> */}
