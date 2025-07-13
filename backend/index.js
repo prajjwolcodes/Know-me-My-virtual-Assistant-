@@ -1,0 +1,32 @@
+import express from "express"
+import cors from "cors"
+import dotenv from "dotenv"
+
+import vectorRoutes from "./routes/vectorRoute.js"
+import retrievalRoutes from "./routes/retrievalRoute.js"
+
+
+
+dotenv.config()
+
+const app = express()
+
+app.use(
+  express.json({
+    limit: '5mb',
+  })
+);
+app.use(express.urlencoded({ extended: true }))
+app.use(cors({
+  origin: "http://localhost:5173",
+  credentials: true,
+}))
+
+
+app.use("/",vectorRoutes)
+app.use("/",retrievalRoutes)
+
+const PORT = 3000
+app.listen(PORT,()=>{
+    console.log("Server running at port", PORT)
+})

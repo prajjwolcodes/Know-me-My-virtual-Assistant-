@@ -1,0 +1,63 @@
+Name: Prajjwol Shrestha
+
+About You:
+Prajjwol is a full stack web developer with around 1 year of experience, primarily working in the MERN stack. Currently, he is transitioning into using Next.js to broaden job opportunities and improve efficiency by leveraging its full-stack capabilities. Although still mastering the framework, Prajjwol has built various practical apps with it, including a music event booking site, a social media app with real-time follow/unfollow syncing, and a food ordering website that generates PDF receipts after checkout.
+
+Technical Stack & Tools:
+- Frontend: React.js, Tailwind CSS, Next.js (latest)
+- Backend: Node.js, Express.js, MongoDB (Mongoose)
+- API/Networking: Axios, REST APIs, React Query (basic knowledge)
+- Auth/Theming: next-themes
+- Media: Jamendo API-based audio player (play/pause, seek, shuffle, repeat, volume, keyboard support)
+- LangChain: Basic RAG setup with `index.js`, text files, Supabase, Google Generative AI embeddings
+- Vector Store: SupabaseVectorStore
+
+Projects & Implementations:
+- Social media app: Follow/unfollow feature with real-time updates and follower count display
+- Food ordering app: Uses PDF generation after checkout
+- Music player: Advanced controls with Jamendo API
+- LangChain RAG project: Embedding, vector store, and question replacement debugging
+
+
+What You Do:
+- Frontend Developer skilled in React, Next.js, and Tailwind CSS.
+- Comfortable with backend integration using Axios and working with PHP when needed.
+- Experienced in building product pages, dashboards, calendar-based appointment systems, and filterable UI components.
+- Skilled in integrating external APIs like Google Calendar.
+- Developed components such as `AppointmentList`, custom search and filter bars, and used FullCalendar with custom styles.
+- Participated in a 4-month internship, earning 6000 NPR per month.
+- Recently left the internship and is transitioning into new opportunities.
+
+Hobbies & Personal Interests:
+- Enjoys learning and creating custom UIs using Tailwind with animations, Instagram-like styling
+- Passionate about music
+- Likes sketching and is learning it
+- Prefers learning through listening or videos over reading documentation
+- Records himself to improve English speaking skills
+
+Routine & Fitness:
+- Gym time: 6 p.m. to 8 p.m. with intense workouts
+- Morning: Runs and consumes protein
+- Post-gym: Takes meal and creatine immediately after workout
+- On a fat loss journey and follows a normal diet (not overly strict)
+
+Games & Entertainment:
+- Enjoys free multiplayer football games that support controller play on the same PC
+- Uses Steam and is interested in games like eFootball for local multiplayer
+
+Tech Environment:
+- Uses Linux (Pop!_OS), Chrome from Pop!_Shop
+- Low-end PC; uses Linux also for gaming
+- Prefers storing games in Local Disk D due to limited space in C
+
+Other Notable Interests and Experiments:
+- Has tried LangChain error debugging
+- Created AI prompts and experimented with LLMs to make scripts using Google Gemini VEO3
+- Asked philosophical and business valuation questions (like equity and company worth)
+- Learns through hands-on exploration (e.g., file manipulation, vector store, Markdown parsing, embedding documents)
+
+Personality Traits:
+- Inquisitive, practical learner who prefers experimenting to understand
+- Persistent in problem-solving and debugging
+- Curious about how systems work end-to-end (from embedding to query processing)
+- Likes to document and understand everything clearly before implementation

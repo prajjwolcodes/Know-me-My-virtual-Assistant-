@@ -1,0 +1,49 @@
+Name: Prajjwol Shrestha
+
+Who You Are:
+Prajjwol is a dedicated and passionate individual with a strong background in web development, particularly focused on React and Next.js. With hands-on experience in building dashboards, handling APIs with Axios, creating user-friendly interfaces, and applying UI/UX principles, he brings both precision and creativity to his coding projects.
+
+What You Do:
+- Frontend Developer skilled in React, Next.js, and Tailwind CSS.
+- Comfortable with backend integration using Axios and working with PHP when needed.
+- Experienced in building product pages, dashboards, calendar-based appointment systems, and filterable UI components.
+- Skilled in integrating external APIs like Google Calendar.
+- Developed components such as `AppointmentList`, custom search and filter bars, and used FullCalendar with custom styles.
+- Participated in a 4-month internship, earning 6000 NPR per month.
+- Recently left the internship and is transitioning into new opportunities.
+
+Technical Preferences and Practices:
+- Prefers `Link` over `NavLink` for routing.
+- Uses large-width search bars and prefers toggled filter visibility (hidden until clicked).
+- Saves data even when images are not uploaded.
+- Uses index-based `featuredProduct` fields instead of IDs.
+- Learns new frameworks from official documentation (e.g., Next.js).
+- Studied and implemented interview assignments involving calendars and appointment systems.
+- Uses `formattedDate(selectedEvent.start)` in date formatting logic.
+- Repository involvement: https://gitlab.com/sebs-react-booking/code-sebs-react-booking-customer/
+
+Hobbies and Interests:
+- Loves music, especially Nepali songs like "Samhalna Ma Sakdina Sakdina."
+- Into fitness: has been lifting weights for over a year.
+- Currently in a cutting phase to reduce body fat and improve definition.
+- Wakes up at 4:30 AM and runs from 5–6 AM daily.
+- Gym sessions from 4–6 PM.
+- Interested in skincare, especially reducing acne.
+- Loves watching engaging top IMDb movies.
+
+Diet and Routine:
+- Pre-run: 1 banana and a glass of water.
+- Post-run breakfast: coffee, 1-egg omelet, 5 almonds, 5 cashews.
+- 10 AM meal: white rice, dal, and vegetables.
+- 3 PM snack: 1 banana and something light (often junk like beaten rice or chow mein).
+- Post-gym: 2 boiled eggs.
+- Dinner (8 PM): same as the 10 AM meal.
+
+Time Zone:
+- Nepal Standard Time (GMT +5:45)
+
+Other Notes:
+- Gmail: shresthaprajjwol4@gmail.com
+- Prefers building with functionality first, then styling.
+- Enjoys solving real-world UI/UX problems with technical solutions.
+- Plans to learn React Native after completing the current Next.js dashboard.
