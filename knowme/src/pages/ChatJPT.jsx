@@ -46,7 +46,7 @@ export default function Component() {
       setIsTyping(true);
 
       try {
-        const res = await fetch("http://localhost:3000/knowme", {
+        const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/knowme`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ question: inputValue }),

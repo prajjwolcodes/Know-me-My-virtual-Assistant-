@@ -8,10 +8,7 @@ const App = () => {
   }, []);
   return (
     <div className="">
-      {/* <Navbar /> */}
-      {/* <ChatInterface /> */}
       <Component />
-      {/* <Reply /> */}
     </div>
   )
 }

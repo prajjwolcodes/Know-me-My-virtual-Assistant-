@@ -21,7 +21,7 @@ app.use(cors());
 app.use("/",vectorRoutes)
 app.use("/",retrievalRoutes)
 
-const PORT = 3000
+const PORT = process.env.PORT || 3000;
 app.listen(PORT,()=>{
     console.log("Server running at port", PORT)
 })
