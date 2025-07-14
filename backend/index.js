@@ -21,6 +21,10 @@ app.use(cors());
 app.use("/",vectorRoutes)
 app.use("/",retrievalRoutes)
 
+app.get("/", (req, res) => {
+  res.send("Welcome to KnowMe API");
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT,()=>{
     console.log("Server running at port", PORT)

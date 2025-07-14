@@ -45,12 +45,17 @@ export default function Component() {
       setInputValue("");
       setIsTyping(true);
 
+
+      console.log(`${import.meta.env.VITE_BACKEND_URL}`)
       try {
         const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/knowme`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ question: inputValue }),
         });
+
+        if(!res.ok)
+            throw new Error("Failed to fetch response from server");
 
         const reader = res.body.getReader();
         const decoder = new TextDecoder("utf-8");
@@ -228,7 +233,7 @@ export default function Component() {
           messages.length > 0 ? "justify-start mt-2 sm:mt-4" : "justify-center "
         } flex flex-col items-center  min-h-[calc(100vh-150px)] px-2 sm:px-4`}
       >
-        <div className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-3xl overflow-y-auto max-h-[calc(100vh-200px)] scroll-container">
+        <div className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-3xl overflow-y-auto max-h-[calc(100vh-200px)] scroll-container">
           {messages.map((message) => (
             <div
               key={message.id}
