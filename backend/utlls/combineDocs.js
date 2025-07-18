@@ -1,5 +1,4 @@
-export const combineDocuments = async (docs) => {
-  return docs.map((doc) => {
-    return doc.pageContent;
-  }).join("\n\n");
-};
+export function combineDocuments(docs) {
+  // Ensure we only process documents that have pageContent
+  return docs.map((doc) => doc.pageContent).join("\n\n---\n\n");
+}

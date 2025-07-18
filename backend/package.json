@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
-    "@langchain/community": "^0.3.47",
+    "@langchain/community": "^0.3.48",
     "@langchain/core": "^0.3.61",
     "@langchain/google-genai": "^0.2.14",
     "@supabase/supabase-js": "^2.50.2",
@@ -9,7 +9,9 @@
     "dotenv": "^16.4.5",
     "express": "^5.1.0",
     "langchain": "^0.3.29",
+    "multer": "^2.0.1",
     "nodemon": "^3.1.10",
+    "pdf-parse": "^1.1.1",
     "supabase": "^2.30.4"
   },
   "type": "module"
