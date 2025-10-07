@@ -1,4 +1,5 @@
 import { Send } from "lucide-react";
+import { Link } from "react-router";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -153,7 +154,7 @@ export default function Component() {
       {/* Header */}
       <header className="flex items-center justify-between px-2 sm:px-4 py-3">
         <div className="flex items-center gap-2">
-          <span className="text-base sm:text-lg font-medium">Chat-JPT</span>
+          <Link to="/"><span className="text-base sm:text-lg font-medium">Chat-JPT</span></Link>
 
           {/* <ChevronDown className="w-4 h-4 text-gray-400" /> */}
         </div>
