@@ -1,5 +1,4 @@
 import { Send } from "lucide-react";
-import { Link } from "react-router-dom";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -46,8 +45,7 @@ export default function Component() {
       setInputValue("");
       setIsTyping(true);
 
-
-      console.log(`${import.meta.env.VITE_BACKEND_URL}`)
+      console.log(`${import.meta.env.VITE_BACKEND_URL}`);
       try {
         const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/knowme`, {
           method: "POST",
@@ -55,8 +53,7 @@ export default function Component() {
           body: JSON.stringify({ question: inputValue }),
         });
 
-        if(!res.ok)
-            throw new Error("Failed to fetch response from server");
+        if (!res.ok) throw new Error("Failed to fetch response from server");
 
         const reader = res.body.getReader();
         const decoder = new TextDecoder("utf-8");
@@ -150,11 +147,13 @@ export default function Component() {
   ];
 
   return (
-   <div className="min-h-screen bg-[#212121] px-2 sm:px-4 md:px-6 lg:px-8 py-1 text-[#F3F3F3]">
+    <div className="min-h-screen bg-[#212121] px-2 sm:px-4 md:px-6 lg:px-8 py-1 text-[#F3F3F3]">
       {/* Header */}
       <header className="flex items-center justify-between px-2 sm:px-4 py-3">
         <div className="flex items-center gap-2">
-          <Link to="/"><span className="text-base sm:text-lg font-medium">Chat-JPT</span></Link>
+          <a href="/">
+            <span className="text-base sm:text-lg font-medium">Chat-JPT</span>
+          </a>
 
           {/* <ChevronDown className="w-4 h-4 text-gray-400" /> */}
         </div>
@@ -312,7 +311,7 @@ export default function Component() {
 
           {/* Input area */}
           <div className="relative">
-           <div
+            <div
               className={`${
                 messages.length > 0
                   ? "chat-input fixed bottom-4 px-2 py-2 left-2 right-2 sm:left-[25%] sm:right-[25%] sm:w-1/2  sm:bottom-6"
