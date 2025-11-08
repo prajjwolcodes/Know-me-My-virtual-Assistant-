@@ -12,6 +12,7 @@ import { Avatar, AvatarFallback } from "../components/ui/avatar";
 import { Bot } from "lucide-react";
 
 import { useEffect, useRef, useState } from "react";
+import { toast, Toaster } from "sonner";
 
 export default function Component() {
   const [messages, setMessages] = useState([]);
@@ -28,6 +29,23 @@ export default function Component() {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  useEffect(() => {
+    const hasVisited = localStorage.getItem("visitedChatJPT");
+
+    if (!hasVisited) {
+      toast.info(
+        "The server is hosted on render, so the first response may take a bit longer.",
+        {
+          duration: 4000,
+        }
+      );
+      localStorage.setItem("visitedChatJPT", "true");
+      setTimeout(() => {
+        localStorage.removeItem("visitedChatJPT");
+      }, 120000); // 2 minutes
+    }
+  }, []);
 
   const handleSend = async () => {
     if (inputValue.trim()) {
