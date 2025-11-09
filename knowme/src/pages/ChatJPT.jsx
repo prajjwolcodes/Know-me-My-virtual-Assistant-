@@ -179,7 +179,7 @@ export default function Component() {
         <div className="flex items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10">
           <div className="text-xs sm:text-sm text-gray-300">
             <a
-              href="https://drive.google.com/file/d/13_vwzQfqgbhdwwnPCmUmlwy9-4_j8v-m/view"
+              href="https://drive.google.com/file/d/18Sbsb0KDjRzqrBvxO7ZIC4aYW5ZMez7c/view?usp=sharing"
               target="_blank"
             >
               <h1 className="hover:underline cursor-pointer">View my CV</h1>
