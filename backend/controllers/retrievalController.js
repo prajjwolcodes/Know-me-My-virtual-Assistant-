@@ -16,7 +16,15 @@ import {
 async function getAnswer(question) {
   const client = createClient(
     process.env.SUPABASE_PROJECT_URL,
-    process.env.SUPABASE_API_KEY
+    process.env.SUPABASE_API_KEY,
+    {
+      auth: {
+        persistSession: false,
+      },
+      global: {
+        fetch: fetch,
+      },
+    }
   );
 
   const embeddings = new GoogleGenerativeAIEmbeddings({
@@ -36,7 +44,7 @@ async function getAnswer(question) {
 
   const model = new ChatGoogleGenerativeAI({
     apiKey: process.env.GEMINI_API_KEY,
-    model: "gemini-2.0-flash",
+    model: "gemini-2.5-flash",
     temperature: 0.2,
     maxOutputTokens: 1024,
   });
@@ -73,9 +81,30 @@ Never make things up, and don't act like a bot. Sound like a real person — me.
     answerChain,
   ]);
 
-  const res = await chain.stream({ question });
-
-  return res;
+  let retries = 3;
+  while (retries > 0) {
+    try {
+      const res = await chain.stream({ question });
+      return res;
+    } catch (error) {
+      // Handle 429 Too Many Requests
+      if (error.status === 429 && error.errorDetails) {
+        const retryInfo = error.errorDetails.find(
+          (e) => e["@type"] === "type.googleapis.com/google.rpc.RetryInfo"
+        );
+        let retryDelay = 30; // default to 30s
+        if (retryInfo && retryInfo.retryDelay) {
+          retryDelay = parseInt(retryInfo.retryDelay);
+        }
+        console.warn(`Quota exceeded. Retrying in ${retryDelay} seconds...`);
+        await new Promise((res) => setTimeout(res, retryDelay * 1000));
+        retries--;
+      } else {
+        throw error;
+      }
+    }
+  }
+  throw new Error("Exceeded maximum retries due to API rate limits.");
 }
 
 export async function retrievalController(req, res) {
